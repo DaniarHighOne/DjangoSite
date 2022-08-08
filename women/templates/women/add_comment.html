@@ -1,0 +1,14 @@
+{% extends 'women/base.html' %}
+
+{% block title %} Добавить комментарий{% endblock %}
+
+{% block content%}
+
+<h1> Добавить комментарий</h1>
+<br/><br/>
+<div class="form-group">
+    <form method="POST"></form>
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button class ='button-secondary'> Добавить комментарий</button>
+</div>

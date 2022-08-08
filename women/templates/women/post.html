@@ -1,0 +1,31 @@
+{% extends 'women/base.html' %}
+
+{% block content %}
+<h1>{{post.title}}</h1>
+
+{% if post.photo %}
+<p><img class="img-article-left" src="{{post.photo.url}}"></p>
+{% endif %}
+
+{{post.content|linebreaks}}
+{% endblock %}
+<!-- <br>
+</br>
+<h2>Comments...</h2></h2>
+<br/>
+{% if not post.comments.all %}
+<a href="{% url add_comment post.pk %}"> Добавить комментарий</a>
+{% else %}
+    {% for comment in post.comments.all %}
+       <strong> {{ comment.name}}-
+                {{ comment.date_added}}
+        </strong>
+        <br/>
+                {{ comment.body}}
+
+    <a href="{% url add_comment  post.pk %}" > Добавить комментарий</a>
+{% endfor %}
+
+{% endif %} -->
+
+
